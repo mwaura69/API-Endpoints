@@ -35,7 +35,7 @@ router.post('/users/signup', async (req, res) => {
 
 
 //login user
-router.get('/users/login', async (req, res) => {
+router.post('/users/login', async (req, res) => {
     try {
         const {email, password} = req.body
         const user = await Users.findOne({email})
