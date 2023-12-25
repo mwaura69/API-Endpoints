@@ -93,7 +93,7 @@ router.post('/user/buyer/signup', async (req, res) => {
 
 
 //getting buyers details
-router.get('/user/buyer/login', async (req, res) => {
+router.post('/user/buyer/login', async (req, res) => {
     try {
         const {email, password} = req.body
         const user = await Users.findOne({email})
